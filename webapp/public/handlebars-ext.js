@@ -1,0 +1,1 @@
+../../handbars-ext/dist/bundle.js
