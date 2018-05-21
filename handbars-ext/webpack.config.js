@@ -8,7 +8,11 @@ module.exports = {
   },
   module: {
     rules: [
-        { test: /\.handlebars$/, loader: "handlebars-loader" }    
+        { test: /\.handlebars$/, loader: "handlebars-loader" },
+        {
+            test: /\.css$/,
+            use: [ 'style-loader', 'css-loader' ]
+        }  
     ]
   }
 };
