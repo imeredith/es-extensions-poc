@@ -12,7 +12,13 @@ function extensionA(context: Context) {
   ReactDOM.render(<p>ExtensionA - index {context.index}</p>, context.container);
 }
 
+function extensionC(context: RenderContext) {
+  ReactDOM.render(<p>ExtensionC</p>, context.container);
+}
+
+ExtensionStore.getInstance().register("extB", extensionC);
 ExtensionStore.getInstance().register("test.ext", extensionA);
+
 class App extends React.Component {
   public render() {
     const extensions = ExtensionStore.getInstance().getExtensions<Context>("test.ext");

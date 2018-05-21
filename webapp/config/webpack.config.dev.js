@@ -119,7 +119,7 @@ module.exports = {
       // { parser: { requireEnsure: false } },
 
       {
-        test: /\.(js|jsx|mjs)$/,
+        test: /\.(jst|jsx|mjs)$/,
         loader: require.resolve('source-map-loader'),
         enforce: 'pre',
         include: paths.appSrc,
@@ -141,7 +141,7 @@ module.exports = {
             },
           },
           {
-            test: /\.(js|jsx|mjs)$/,
+            test: /\.(jst|jsx|mjs)$/,
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
